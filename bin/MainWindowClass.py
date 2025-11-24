@@ -78,7 +78,7 @@ class SortMain(QWidget):
             self.AllOrSelectButton.setText('Все "." / ̲В̲ы̲б̲р̲а̲т̲ь̲ ф̲о̲р̲м̲а̲т̲ы̲')
             self.SelectFormatButton.setEnabled(True)
 
-    def Sort(self):#/home/artur82/PycharmProjects/SortMan/Test/
+    def Sort(self):
         self.DB = 'bin/DataBase/BD.sqlite'
         os.walk(self.ToPath)
         if self.SelectFileLineEdit_2.text() == '':
@@ -103,8 +103,8 @@ class SortMain(QWidget):
                                     if self.TypeSort.currentText() == 'Год/Месяц/День/Час':
                                         Day = time.ctime(os.path.getctime(file)).split()[:2]
                                         Day = reversed(Day)
-                                        data = [time.ctime(os.path.getctime(file)).split()[-1],
-                                                ' '.join(Day) + f'(числа: {time.ctime(os.path.getctime(file)).split()[2]})',
+                                        data = [time.ctime(os.path.getctime(file)).split()[-1], '- год,',
+                                                ' '.join(Day) + f'(день: {time.ctime(os.path.getctime(file)).split()[2]}) час:',
                                                 time.ctime(os.path.getctime(file)).split()[3].split(':')[0]]
                                         if ' '.join(data) not in os.listdir(self.ToPath):
                                             os.mkdir(self.ToPath + '/' + ' '.join(data))
@@ -112,14 +112,14 @@ class SortMain(QWidget):
                                     elif self.TypeSort.currentText() == 'Год/Месяц/День':
                                         Day = time.ctime(os.path.getctime(file)).split()[:2]
                                         Day = reversed(Day)
-                                        data = [time.ctime(os.path.getctime(file)).split()[-1],
-                                                ' '.join(Day) + f'(числа: {time.ctime(os.path.getctime(file)).split()[2]})']
+                                        data = [time.ctime(os.path.getctime(file)).split()[-1], '- год,',
+                                                ' '.join(Day) + f'(день: {time.ctime(os.path.getctime(file)).split()[2]})']
                                         if ' '.join(data) not in os.listdir(self.ToPath):
                                             os.mkdir(self.ToPath + '/' + ' '.join(data))
                                         shutil.copy(file, self.ToPath + '/' + ' '.join(data) + '/' + file.split('/')[-1])
                                     elif self.TypeSort.currentText() == 'Год/Месяц':
                                         Day = time.ctime(os.path.getctime(file)).split()[:2]
-                                        data = [time.ctime(os.path.getctime(file)).split()[-1], Day[1]]
+                                        data = [time.ctime(os.path.getctime(file)).split()[-1], '- год,', Day[1]]
                                         if ' '.join(data) not in os.listdir(self.ToPath):
                                             os.mkdir(self.ToPath + '/' + ' '.join(data))
                                         shutil.copy(file, self.ToPath + '/' + ' '.join(data) + '/' + file.split('/')[-1])

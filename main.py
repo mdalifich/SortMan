@@ -1,10 +1,4 @@
-import sys
-import os
-import glob
-import os.path
-import sqlite3
-import shutil
-import time
+
 import bin.MainWindowClass
 from bin.MainWindowClass import *
 

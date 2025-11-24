@@ -1,1 +1,1 @@
-DefaultDirectory
+/home/artur82/Рабочий стол/test
