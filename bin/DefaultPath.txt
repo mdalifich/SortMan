@@ -1,1 +1,1 @@
-/home/artur82/Рабочий стол/test
+/home/artur82/PycharmProjects/SortMan/DefaultDirectory

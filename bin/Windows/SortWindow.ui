@@ -54,7 +54,7 @@
    </property>
    <widget class="QWidget" name="PickFile">
     <attribute name="title">
-     <string>Выбор фалйа</string>
+     <string>Выбор файла</string>
     </attribute>
     <widget class="QLineEdit" name="SelectFileLineEdit">
      <property name="geometry">
@@ -168,6 +168,35 @@
      <property name="text">
       <string>! Если строка будет пустой, то файлы перенесутся в крайную введенную папку, либо во встроенную папку !</string>
      </property>
+    </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>0</y>
+       <width>271</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="openHistory">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>История сортировки</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="TypeSelect">
