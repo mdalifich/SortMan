@@ -15,9 +15,9 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../SystemIcon/Preview.png</normaloff>../SystemIcon/Preview.png</iconset>
+    <normaloff>../../../../.designer/SystemIcon/Preview.png</normaloff>../../../../.designer/SystemIcon/Preview.png</iconset>
   </property>
-  <widget class="QTextBrowser" name="historyTexBox">
+  <widget class="QTextBrowser" name="historyTextBox">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -35,6 +35,9 @@
      <width>194</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="displayFormat">
+    <string>dd.MM.yyyy HH</string>
    </property>
   </widget>
   <widget class="QPushButton" name="filtrButton">
